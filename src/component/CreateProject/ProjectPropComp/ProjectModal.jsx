@@ -4,6 +4,7 @@ import { TextField, Modal, Button } from "@mui/material";
 import { toast } from "react-toastify";
 import { config } from "../../../App";
 import axios from "axios";
+import { format } from "date-fns";
 
 const ProjectModal = ({ onClose, isOpen }) => {
   const [projectTitle, setProjectTitle] = useState("");
@@ -14,6 +15,7 @@ const ProjectModal = ({ onClose, isOpen }) => {
         `${config.endpoint}/project`,
         {
           title: projectTitle,
+          updatedDate: format(new Date(), "dd/MM/yyyy")
         },
         {
           headers: {

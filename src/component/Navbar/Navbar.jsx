@@ -1,44 +1,39 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import './Navbar.css';
-import image from '../Navbar/directright.png';
-import bell from '../Navbar/notifications.svg';
-import settingIcon from '../Navbar/icon.svg';
-import downloadIcon from '../Navbar/download.png';
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Navbar.css";
+import { IconLogout, IconBell, IconSettings } from "@tabler/icons-react";
 
-const Navbar = ({ setLoggedIn }) => {
+const Navbar = () => {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userEmail, setUserEmail] = useState('');
 
   const handleLogout = () => {
-    localStorage.removeItem('authToken');
+    localStorage.removeItem("authToken");
     setIsLoggedIn(false);
-    setLoggedIn(false); // Update authentication state in parent component
-    navigate('/'); // Redirect to login page or other appropriate action
+    navigate("/");
   };
 
-  const handleSettingsClick = () => {
-    navigate('/settings');
-  };
+  useEffect(() => {
+    if(localStorage.getItem("authToken")) {
+      setIsLoggedIn(true)
+    }
+  },[])
 
   return (
-    <div className={`navbar-container ${isLoggedIn ? 'dark-background' : ''}`}>
-       <div className="comapany-logo"><span className="comapany-logo-highlight">Ques.</span>AI</div>
-      <div className='icons'>
-        <div className='icon'>
-          <img src={bell} alt="Notifications" />
-        </div>
+    <div className={`navbar-container ${isLoggedIn ? "dark-background" : ""}`}>
+      <div className="comapany-logo">
+        <span className="comapany-logo-highlight">Ques.</span>AI
+      </div>
+      <div className="icons">
+        <IconBell stroke={2} />
         {isLoggedIn ? (
-          <div className='icon' onClick={handleSettingsClick}>
-            <span className="user-email">{userEmail}</span>
-            <img src={settingIcon} alt="Settings" />
-            <img src={downloadIcon} alt="Download" />
+          <div className="icon">
+            <IconSettings stroke={2} />
+            <IconLogout stroke={2} onClick={handleLogout}/>
           </div>
         ) : (
-          <div className='icon' onClick={handleSettingsClick}>
-            <img src={settingIcon} alt="Settings" />
+          <div className="icon">
+            <IconSettings stroke={2} />
           </div>
         )}
       </div>

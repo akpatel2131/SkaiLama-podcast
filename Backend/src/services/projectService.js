@@ -11,7 +11,6 @@ const createProjectData = async (data) => {
 
 const getAllProjectst = async (userId) => {
   try {
-    console.log({userId})
     const fetchAllData = await Project.find({ userId });
     return fetchAllData;
   } catch (error) {
