@@ -9,7 +9,7 @@ import "./App.css";
 import Navbar from "./component/Navbar/Navbar";
 
 export const config = {
-  endpoint: `http://localhost:3001/api`,
+  endpoint: `https://skailama-podcast-1.onrender.com/api`,
 };
 
 function ProjectPage({ component }) {
