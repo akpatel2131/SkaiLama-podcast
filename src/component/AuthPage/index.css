@@ -1,0 +1,90 @@
+
+.auth-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.auth-left-container {
+    background-color: #9059e3;
+    flex: 2;
+    padding: 30px;
+    color: #fff;
+    text-align: left;
+}
+
+.auth-right-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.comapany-name {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.comapany-name-highlight {
+    font-weight: 600;
+}
+
+.comapany-info {
+    font-size: 50px;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.comapany-sub-text {
+    font-size: 20px;
+    max-width: 300px;
+    font-weight: 500;
+}
+
+.welocome-container {
+    font-size: 30px;
+    color: #9059e3;
+}
+
+/* Login */
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.input-field, .login-button {
+    width: 100%;
+}
+
+.divider-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    justify-content: center;
+}
+
+.divider {
+    width: 40%;
+}
+
+.create-account-text {
+    font-size: 14px;
+}
+
+.create-account {
+    color: #0752f2;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: capitalize;
+}

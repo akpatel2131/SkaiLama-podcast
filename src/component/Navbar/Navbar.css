@@ -1,0 +1,41 @@
+   
+   .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 40px; /* Adjust as necessary */
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust the gap between icons */
+  }
+  
+  .icon img {
+    width: 30px; /* Adjust the size as necessary */
+    height: 30px;
+  }
+
+  .comapany-logo {
+    font-size: 40px;
+    font-weight: 300;
+    color: #7E22CE;
+}
+
+.comapany-logo-highlight {
+    font-weight: 600;
+}
+  

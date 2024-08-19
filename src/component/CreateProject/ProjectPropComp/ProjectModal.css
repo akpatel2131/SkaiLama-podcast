@@ -1,0 +1,23 @@
+.buttons {
+  align-self: flex-end;
+  display: flex;
+  gap: 10px;
+}
+
+.project-modal {
+  display: flex;
+  max-width: 500px;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background-color: #fff;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 200px;
+  border-radius: 20px;
+}
+
+.prompt-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
